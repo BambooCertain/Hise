@@ -1,0 +1,22 @@
+@import "../../style/loading.wxss";
+@import "../../style/result.wxss";
+
+.back{
+  text-align: center;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  margin-top:30%;
+  font-size: 30rpx;
+  color: #ffffff;
+  width: 240rpx;
+  height: 70rpx;
+  border-radius: 100rpx;
+  background-color: #e03e16;
+}
+
+.rank{
+  text-align: center;
+  margin-top: 20%;
+}
+

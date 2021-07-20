@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="loading_box" wx:if="{{loading}}">
+    <view class="loading3 loading3_1"></view>
+    <view class="loading3 loading3_2"></view>
+    <view class="loading3 loading3_3"></view>
+  </view>
+  <view class='top'>
+    <view class='topLeft'>
+      <text style='margin-left:20rpx;'>多项选择</text>
+    </view>
+    <view class='topRight'>
+      <view class='topRightContent'>
+        <text style='color:#1bd0bd;font-size:50rpx; font-style:italic;margin-right:10rpx;'>{{nowQuestionNumber}}</text>
+        <text> / {{multiChoiceNumber}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='questionTitle'>
+    <text>{{nowQuestion.question}}</text>
+  </view>
+  <view class='questionOption'>
+    <view class='item' wx:for="{{nowQuestion.options}}" wx:key="userInfoListId">
+      <view class='characterNotChose' bindtap='chose' data-option="{{item.name}}" wx:if="{{!userChose[item.name]}}">{{item.name}}</view>
+      <view class='characterChose' bindtap='unChose' data-option="{{item.name}}" wx:if="{{userChose[item.name]}}">{{item.name}}</view>
+      <view class='option'>{{item.detail}}</view>
+    </view>
+  </view>
+  <view>
+    <text>\r\n</text>
+  </view>
+  <view class='submit' bindtap='answer' style='background-color:{{answered == 1 ? "#e03e16" : ""}}'>
+    <image class='handIcon' src='../../images/hand.png'></image>
+    <text>{{answered == 1 ? "下一题" : "提交答案"}}</text>
+  </view>
+
+  <view class='option'><text>\r\n</text>{{hint}}</view>
+</view>

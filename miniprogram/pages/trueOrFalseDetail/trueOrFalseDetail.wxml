@@ -1,0 +1,41 @@
+<!--miniprogram/pages/trueOrFalseDetail/trueOrFalseDetail.wxml-->
+<view class="page">
+  <view class="loading_box" wx:if="{{loading}}">
+    <view class="loading3 loading3_1"></view>
+    <view class="loading3 loading3_2"></view>
+    <view class="loading3 loading3_3"></view>
+  </view>
+  <view class='top'>
+    <view class='topLeft'>
+      <text style='margin-left:20rpx;'>判断题</text>
+    </view>
+    <view class='topRight'>
+      <view class='topRightContent'>
+        <text style='color:#e03e16;font-size:50rpx; font-style:italic;margin-right:10rpx;'>{{nowQuestionNumber}}</text>
+        <text> / {{trueOrFalseNumber}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='questionTitle'>
+    <text>{{nowQuestion.question}}</text>
+  </view>
+
+  <!-- 选项 -->
+  <view class='questionOption'>
+    <view class='item' wx:for="{{nowQuestion.options}}" wx:key="userInfoListId">
+      <view class='blankCharacter character' wx:if="{{!userChose || userChose != item.name && item.name != nowQuestion.answer}}" data-option="{{item.name}}" catchtap='chose'>{{item.name}}</view>
+      <view class='correctCharacter character'  wx:if="{{userChose && nowQuestion.answer==item.name}}">{{item.name}}</view>
+      <view class='discorrectCharacter character' wx:if="{{userChose==item.name && nowQuestion.answer!=userChose}}">{{item.name}}</view>
+      <view class='option'>{{item.detail}}</view>
+    </view>
+  </view>
+  <view>
+  <text>\r\n</text>
+  </view>
+  <view class='submit' bindtap='afterQuestion' wx:if="{{userChose && userChose != nowQuestion.answer}}" bindtap='showNextQuestion'>
+    <image class='handIcon' src='../../images/hand.png'></image>
+    下一题
+  </view>
+  <!-- <view class='lastQuestion' wx:if="{{userChose && userChose != nowQuestion.answer}}" bindtap='showNextQuestion'>下一题</view> -->
+</view>

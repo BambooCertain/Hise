@@ -1,0 +1,118 @@
+<view class="page">
+  <view class="loading_box" wx:if="{{loading}}">
+    <view class="loading3 loading3_1"></view>
+    <view class="loading3 loading3_2"></view>
+    <view class="loading3 loading3_3"></view>
+  </view>
+
+  <view class='grayLine'></view>
+
+  <view class='ranking' wx:for="{{ranking_list}}" wx:key="test">
+
+    <view class="item1" wx:if="{{index==0}}">
+      <image class='xueBaIcon' src='../../images/C_16.png'></image>
+      <view class='left'>
+        <view class='left_left1'>
+          {{item.rank}}
+        </view>
+      </view>
+
+
+      <!-- <view class='left_right'>
+             <image class="userPhoto"    src="{{item.userPic}}" />
+      </view> -->
+
+
+      <view class='middle'>
+        <view class='middle_top'>
+          {{item.realName}}
+        </view>
+        <view class='middle_bottom'>
+          {{item.className}}
+        </view>
+      </view>
+
+      <view class='right'>
+        <view class='score'>
+          {{item.score}}
+        </view>
+      </view>
+      <!-- <view class='like'>
+        <view class='likeTop'>
+          {{item.likeNumber}}
+        </view>
+        <view class='likeBottom'>
+          <image class='likeIcon' src='../../images/heartClick.png' wx:if="{{ranking_list[index].hadLike}}"></image>
+          <image class='likeIcon' src='../../images/heart.png' wx:if="{{!ranking_list[index].hadLike}}" bindtap='like' data-index="{{index}}"></image>
+        </view>
+      </view> -->
+    </view>
+
+    <view class="item2" wx:if="{{index==1}}">
+      <view class='left'>
+        <view class='left_left2'>
+          {{item.rank}}
+        </view>
+      </view>
+      <view class='middle'>
+        <view class='middle_top'>
+          {{item.realName}}
+        </view>
+        <view class='middle_bottom'>
+          {{item.className}}
+        </view>
+      </view>
+      <view class='right'>
+        <view class='score'>
+          {{item.score}}
+        </view>
+      </view>
+    </view>
+
+    <view class="item3" wx:if="{{index==2}}">
+      <view class='left'>
+        <view class='left_left3'>
+          {{item.rank}}
+        </view>
+      </view>
+      <view class='middle'>
+        <view class='middle_top'>
+          {{item.realName}}
+        </view>
+        <view class='middle_bottom'>
+          {{item.className}}
+        </view>
+      </view>
+      <view class='right'>
+        <view class='score'>
+          {{item.score}}
+        </view>
+      </view>
+    </view>
+
+    <view class="item4" wx:if="{{index>2}}">
+      <view class='left'>
+        <view class='left_left4'>
+          {{item.rank}}
+        </view>
+      </view>
+      <view class='middle'>
+        <view class='middle_top'>
+          {{item.realName}}
+        </view>
+        <view class='middle_bottom'>
+          {{item.className}}
+        </view>
+      </view>
+      <view class='right'>
+        <view class='score'>
+          {{item.score}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='title'>
+    <text>\n按照有效积分高低排名。</text>
+  </view>
+</view>

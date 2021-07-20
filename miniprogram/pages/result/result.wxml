@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="loading_box" wx:if="{{loading}}">
+    <view class="loading3 loading3_1"></view>
+    <view class="loading3 loading3_2"></view>
+    <view class="loading3 loading3_3"></view>
+  </view>
+
+  <view class='grade'>
+    <text style='font-size:87rpx;color:#f2403c'>{{score}}</text> /100分</view>
+  <view class='rank'>
+    <text wx:if="{{score>=0&&score<=60}}">本次共答对 {{rightCnt}} 题\r\n少侠仍需努力</text>
+    <text wx:if="{{score>60&&score<80}}">本次共答对 {{rightCnt}} 题\r\n加油，你可以的！</text>
+    <text wx:if="{{score>=80}}">本次共答对 {{rightCnt}} 题</text>
+    <text>\n所用时间{{useTime}}</text>
+  </view>
+  <button class='back' bindtap='returnMainPage'>返回首页</button>
+
+</view>

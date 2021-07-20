@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/choiceMain/choiceMain",
+    "pages/result/result",
+    "pages/Me/Me",
+    "pages/ranking/ranking",
+    "pages/register/register",
+    "pages/singleChoiceDetail/singleChoiceDetail",
+    "pages/singleChoiceExplain/singleChoiceExplain",
+    "pages/multiChoiceDetail/multiChoiceDetail",
+    "pages/multiChoiceExplain/multiChoiceExplain",
+    "pages/trueOrFalseDetail/trueOrFalseDetail",
+    "pages/trueOrFalseExplain/trueOrFalseExplain"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e03e16",
+    "navigationBarTitleText": "党团知识竞赛",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#e03e16",
+    "color": "#dae5e5",
+    "list": [
+      {
+        "text": "答题",
+        "iconPath": "images/7-01.png",
+        "selectedIconPath": "images/6-01.png",
+        "pagePath": "pages/choiceMain/choiceMain"
+      },
+      {
+        "text": "排名",
+        "iconPath": "images/4-01.png",
+        "selectedIconPath": "images/4-02.png",
+        "pagePath": "pages/ranking/ranking"
+      },
+      {
+        "text": "我的",
+        "iconPath": "images/3-01.png",
+        "selectedIconPath": "images/5-01.png",
+        "pagePath": "pages/Me/Me"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

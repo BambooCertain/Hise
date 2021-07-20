@@ -1,0 +1,27 @@
+<view class="page">
+  <view class="container">
+    <view class="userinfo">
+      <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+      <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+
+  <!-- <view wx:if="{{isDoneCount<1}}">
+    <view style='margin-top:-30%;text-align:center;color:#40e24d'>您还有{{1-isDoneCount}}次答题机会</view>
+    <view class='startAnswer' bindtap='start'>
+      开始答题
+    </view>
+  </view>
+  <view wx:else style='margin-top:-50%;text-align:center;color:#40e24d'>您已经完成了所有答题!</view> -->
+
+    
+  <view class='startAnswer' bindtap='start'>
+    开始答题
+  </view>
+</view>
+
+<view class="loading_box" wx:if="{{loading}}">
+  <view class="loading3 loading3_1"></view>
+  <view class="loading3 loading3_2"></view>
+  <view class="loading3 loading3_3"></view>
+</view>
